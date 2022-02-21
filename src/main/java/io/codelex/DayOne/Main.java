@@ -1,8 +1,8 @@
-package io.codelex;
+package io.codelex.DayOne;
 
 import java.util.Scanner;
 
-public class DayOne {
+public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
