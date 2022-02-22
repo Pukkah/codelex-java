@@ -1,4 +1,4 @@
-package io.codelex.DayOne;
+package io.codelex.notes.DayOne;
 
 import java.util.Scanner;
 
