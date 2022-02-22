@@ -1,4 +1,4 @@
-package io.codelex.notes.DayOne;
+package io.codelex.notes.day01;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class PersonalID {
 
-    /**
-     * https://viss.gov.lv/-/media/Files/VRAA/Dokumentacija/Vadlinijas/E_pakalpojumi/Programmetaja_rokasgramatas/VISS2014REKPKMEPAK.ashx
+    /*
+    https://viss.gov.lv/-/media/Files/VRAA/Dokumentacija/Vadlinijas/E_pakalpojumi/Programmetaja_rokasgramatas/VISS2014REKPKMEPAK.ashx
      */
     public static boolean isValid(String id) {
         // 1. Simbolu virkne neatbilst personas koda formātam,
