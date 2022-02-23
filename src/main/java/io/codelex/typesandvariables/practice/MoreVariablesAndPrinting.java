@@ -15,7 +15,6 @@ public class MoreVariablesAndPrinting {
         double heightInCm = height * 2.54;
         double weightInKg = weight * 0.453592;
 
-        // TODO - Keep two digits after decimal separator.
         System.out.println("Let's talk about " + name + ".");
         System.out.printf("He's %.2f centimeters tall.%n", heightInCm);
         System.out.printf("He's %.2f kilos heavy.%n", weightInKg);
