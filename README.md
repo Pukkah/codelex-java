@@ -6,4 +6,25 @@
 
 ## [Day02](src/main/java/io/codelex/notes/day02) (22.02.2022)
 - [GitHub access token and Git](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to)
-- [Main](src/main/java/io/codelex/notes/day02/Main.java) - Operators..
+- [Main](src/main/java/io/codelex/notes/day02/Main.java) - Operators...
+
+## [Day02](src)
+- [Main](src/main/java/io/codelex/notes/day02/Main.java) - Casting, Control flow, loops...
+### Update Branch before Pull
+<details><summary>SHOW ME</summary>
+<p>
+
+####If you've not pushed yet:
+- git commit -m WorkInProgress (or git stash)
+- git rebase master
+- Resolve any conflicts
+- git stash pop if you stashed
+- 
+#### If you have pushed already:
+- Ensure your current branch's commits are production quality
+- git stash
+- git pull (will not conflict, but will create merge commit)
+- git stash pop
+
+</p>
+</details>
