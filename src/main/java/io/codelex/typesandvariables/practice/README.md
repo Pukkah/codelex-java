@@ -2,6 +2,8 @@
 
 ## Exercise #1
 
+> **Completed** [VariablesAndNames.java](./VariablesAndNames.java)
+
 See [VariablesAndNames.java](./VariablesAndNames.java)
 
 - Clean up the code
@@ -12,6 +14,8 @@ See [VariablesAndNames.java](./VariablesAndNames.java)
 - Keep two digits after decimal separator.
 
 ## Exercise #2
+
+> **Completed** [MoreVariablesAndPrinting.java](./MoreVariablesAndPrinting.java)
 
 See [MoreVariablesAndPrinting.java](./MoreVariablesAndPrinting.java)
 
@@ -24,9 +28,13 @@ See [MoreVariablesAndPrinting.java](./MoreVariablesAndPrinting.java)
 
 ## Exercise #3
 
+> **Completed** [Casting.java](./Casting.java)
+
 See [Casting.java](./Casting.java)
 
 ## Exercise #4
+
+> **Completed** [Exercise04.java](./Exercise04.java)
 
 Write a program that stores your name and year of birth into variables, and displays their values on the screen.
 
@@ -39,6 +47,8 @@ My name is Juan Valdez and I was born in 1995.
 ```
 
 ## Exercise #5
+
+> **Completed** [Exercise05.java](./Exercise05.java)
 
 Use several variables to store the names of your classes and their teachers. Then, display a nice little table displaying your schedule.	Just FYI, my column of courses has a width of 26 characters, and the teacher column has a width of 15. The first and last lines are a plus sign, fifty dashes (a.k.a. minus signs) and another plus sign.
 
@@ -59,17 +69,25 @@ Your table doesn't need to look exactly like this, or even line up. I used a tot
 
 ## Exercise #6
 
+> **Completed** [Exercise06.java](./Exercise06.java)
+
 Write a program that asks the user to enter a series of single digit numbers and calculate the sum of all the numbers.
 
 ## Exercise #7
+
+> **Completed** [Exercise07.java](./Exercise07.java)
 
 Write a program that prompts the user to enter a string and displays the number of the uppercase letters in the string.
 
 ## Exercise #8
 
+> **Completed** [Exercise08.java](./Exercise08.java)
+
 Write a Java program to convert minutes into a number of years and days.
 
 ## Exercise #9
+
+> **Completed** [Exercise09.java](./Exercise09.java)
 
 Write a Java program to takes the user for a distance (in meters) and the time was taken (as three numbers: hours, minutes, seconds), and display the speed, in meters per second, kilometers per hour and miles per hour (hint: 1 mile = 1609 meters).
 
@@ -86,5 +104,7 @@ Your speed in miles/h is 0.26158804
 ```
 
 ## Exercise #10
+
+> **Completed** [SadFor.java](./SadFor.java)
 
 See [SadFor.java](./SadFor.java)
