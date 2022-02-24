@@ -2,13 +2,19 @@
 
 # Exercise #1 
 
+> **Completed** [Exercise01.java](./Exercise01.java)
+
 Write a Java program to accept two integers and return true if the either one is 15 or if their sum or difference is 15.
 
 # Exercise #2
 
+> **Completed** [CheckOddEven.java](./CheckOddEven.java)
+
 Write a program called CheckOddEven which prints "Odd Number" if the int variable “number” is odd, or “Even Number” otherwise. The program shall always print “bye!” before exiting.
 
 # Exercise #3 
+
+> **Completed** [SumAverageRunningInt.java](./SumAverageRunningInt.java)
 
 See [SumAverageRunningInt.java](./SumAverageRunningInt.java)
 
@@ -21,9 +27,13 @@ The average is 50.5
 
 # Exercise #4
 
+> **Completed** [Product1ToN.java](./Product1ToN.java)
+
 Write a program called Product1ToN to compute the product of integers from 1 to 10 (i.e., 1×2×3×...×10), as an int. Take not that It is the same as factorial of N.
 
 # Exercise #5
+
+> **Completed** [Exercise05.java](./Exercise05.java)
 
 Write a program that picks a random number from 1-100. Give the user a chance to guess it. If they get it right, tell them so. If their guess is higher than the number, say "Too high." If their guess is lower than the number, say "Too low." Then quit. (They don't get any more guesses for now.)
 
@@ -50,6 +60,8 @@ You guessed it!  What are the odds?!?
 
 # Exercise #6
 
+> **Completed** [CozaLozaWoza.java](./CozaLozaWoza.java)
+
 Write a program called CozaLozaWoza which prints the numbers 1 to 110, 11 numbers per line. The program shall print "Coza" in place of the numbers which are multiples of 3, "Loza" for multiples of 5, "Woza" for multiples of 7, "CozaLoza" for multiples of 3 and 5, and so on. The output shall look like:
 
 ```
@@ -59,6 +71,8 @@ Coza 13 Woza CozaLoza 16 17 Coza 19 Loza CozaWoza 22
 ```
 
 # Exercise #7
+
+> **Completed** [GravityCalculator.java](./GravityCalculator.java)
 
 See [GravityCalculator.java](./GravityCalculator.java)
 
@@ -70,6 +84,8 @@ meters. The formula in Math notation is:
 *Note:* The correct value is -490.5m.
 
 # Exercise #8
+
+> **Completed** [FooCorporation.java](./FooCorporation.java)
 
 Foo Corporation needs a program to calculate how much to pay their hourly employees. The US Department of Labor
 requires that employees get paid time and a half for any hours over 40 that they work in a single week. For example, if an
@@ -95,11 +111,15 @@ method that calls this method for each of these employees:
 
 # Exercise #9
 
+> **Completed** [BodyMassIndex.java](./BodyMassIndex.java)
+
 Write a program that calculates and displays a person's body mass index (BMI). A person's BMI is calculated with the following formula: ```BMI = weight x 703 / height ^ 2```. Where weight is measured in pounds and height is measured in inches. Display a message indicating whether the person has optimal weight, is underweight, or is overweight. A sedentary person's weight is considered optimal if his or her BMI is between 18.5 and 25. If the BMI is less than 18.5, the person is considered underweight. If the BMI value is greater than 25, the person is considered overweight.
 
 Your program must accept metric units.
 
 # Exercise #10
+
+> **Completed** [CalculateArea.java](./CalculateArea.java) && [Geometry.java](./Geometry.java)
 
 See [CalculateArea.java](./CalculateArea.java)
 
