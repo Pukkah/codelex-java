@@ -10,24 +10,22 @@
 
 ## [Day03](./src/main/java/io/codelex/notes/day03) (23.02.2022)
 - [Main](./src/main/java/io/codelex/notes/day03/Main.java) - Casting, Control flow, loops...
+- <details><summary>Update Branch before Pull</summary>
+    <p>
 
-### Update Branch before Pull
-<details><summary>SHOW ME</summary>
-<p>
+    #### If you've not pushed yet:
 
-####If you've not pushed yet:
+  - git commit -m WorkInProgress (or git stash)
+  - git rebase master
+  - Resolve any conflicts
+  - git stash pop if you stashed
 
-- git commit -m WorkInProgress (or git stash)
-- git rebase master
-- Resolve any conflicts
-- git stash pop if you stashed
+    #### If you have pushed already:
 
-#### If you have pushed already:
+  - Ensure your current branch's commits are production quality
+  - git stash
+  - git pull (will not conflict, but will create merge commit)
+  - git stash pop
 
-- Ensure your current branch's commits are production quality
-- git stash
-- git pull (will not conflict, but will create merge commit)
-- git stash pop
-
-</p>
-</details>
+    </p>
+    </details>
