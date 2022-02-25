@@ -29,3 +29,11 @@
   
   </p>
 </details>
+
+## [Day04](./src/main/java/io/codelex/notes/day04) (25.02.2022)
+- [Exceptions](./src/main/java/io/codelex/notes/day04/Exceptions.java) - Catching and Throwing
+- [String.class](./src/main/java/io/codelex/notes/day04/StringClass.java) - String Object and Methods
+- [RegularExpressions](./src/main/java/io/codelex/notes/day04/RegularExpressions.java) - RegEx
+- [HackingTime](./src/main/java/io/codelex/notes/day04/HackingTime.java) - Example using RegEx to scrape data from webpage
+- <http://regexplanet.com>
+- <http://regexr.com>
