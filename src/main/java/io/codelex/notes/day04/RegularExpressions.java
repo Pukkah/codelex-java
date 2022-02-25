@@ -12,7 +12,7 @@ public class RegularExpressions {
         String invalidEmail = "_232@@@dd2--.c+";
 
         System.out.println(validEmail + " " + validEmail.matches(emailRegEx));
-        System.out.println(invalidEmail + " " + validEmail.matches(invalidEmail));
+        System.out.println(invalidEmail + " " + invalidEmail.matches(emailRegEx));
 
         // === Pattern and Matcher
 
@@ -20,11 +20,6 @@ public class RegularExpressions {
         Matcher myMatcher = myPattern.matcher("user@domain.com");
         boolean matches = myMatcher.matches();
         System.out.println(matches);
-
-
-        // Useful tools
-        // - http://regexplanet.com
-        // - https://regexr.com/
 
     }
 }
