@@ -9,7 +9,7 @@ public class DoWhileQuiz {
         // What will be the output?
         // 1. CODELEX
         //    CODELEX
-        // 2. CODELEX
+        // 2. CODELEX <==
         // 3.  
         // 4. runtime error  
         // 5. compilation error  

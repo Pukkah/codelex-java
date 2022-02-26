@@ -1,22 +1,21 @@
 package io.codelex.loops.practice;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class MultiplyByItself {
 
     public static void main(String[] args) {
-        int i, n;
-
         System.out.print("Input number of terms : ");
         Scanner in = new Scanner(System.in);
-        n = in.nextInt();
+        int n = in.nextInt();
 
-        /*
-        todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.pow()
-        for (.......) {
-          System.out.println(........);
+        BigInteger nMultiplyByItself = BigInteger.valueOf(n);
+        for (int i = 0; i < n; i++) {
+            nMultiplyByItself = nMultiplyByItself.multiply(BigInteger.valueOf(n));
+            System.out.println(nMultiplyByItself);
         }
-        */
+
     }
 
 }

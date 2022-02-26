@@ -14,7 +14,7 @@ public class WhileQuiz {
         // 1. count < 100 is always true at Point B 
         // 2. count < 100 is always false at Point B
         // 3. count < 100 is always true at Point A
-        //    and count < 100 is always false at Point C
+        //    and count < 100 is always false at Point C <==
         // 4. count < 100 is always true at Point C
     }
 }
