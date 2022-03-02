@@ -11,10 +11,10 @@ public class Classes {
         System.out.println(instanceOne.getUid()); // Accessing public method to get private variable
         System.out.println(SampleClass.getCount()); // Accessing static method
 
-        SampleClass instanceTwo = new SampleClass("This is My Title");
+        SampleClass instanceTwo = new SampleClass("Pēteris Kļaviņš");
         System.out.println(instanceTwo.getUid() + "/" + SampleClass.getCount() + ": " + instanceTwo.name);
 
-        SampleClass instanceThree = new SampleClass("Another Title", true);
+        SampleClass instanceThree = new SampleClass("Miks", "Ramāns");
         System.out.println(instanceThree); // toString()
 
         System.out.println(instanceThree.getActive());

@@ -4,7 +4,7 @@ public class SampleClass {
     /*
     === ACCESS MODIFIERS ===
     private - None
-    No modifier (default) - Classes in the package
+    No modifier (default) - Classes in the same package
     protected - Classes in package and subclasses inside or outside the package
     public - All classes
      */
@@ -19,22 +19,20 @@ public class SampleClass {
 
     // Constructor
     public SampleClass() {
-        name = "Untitled";
+        name = "unnamed";
         uid = ++count;
     }
 
 
     // Constructor with attribute (method overload)
-    public SampleClass(String name) {
-        this.name = name;
+    public SampleClass(String fullName) {
+        this.name = fullName;
         uid = ++count;
     }
 
-
-    // Constructor with two attributes (method overflow)
-    public SampleClass(String name, boolean format) {
-        this.name = format ? name.toUpperCase() : name;
-        uid = ++count;
+    // Constructor with two attributes (method overflow) + calling different constructor
+    public SampleClass(String firstName, String lastName) {
+        this(firstName + " " + lastName); // calling different constructor from constructor
     }
 
 

@@ -42,3 +42,8 @@
 - [Arrays](./src/main/java/io/codelex/notes/day05/Arrays.java)
 - [Methods](./src/main/java/io/codelex/notes/day05/Methods.java)
 - [Classes](./src/main/java/io/codelex/notes/day05/Classes.java), [SampleClass](./src/main/java/io/codelex/notes/day05/SampleClass.java)
+
+## [Day06](./src/main/java/io/codelex/notes/day06) (02.03.2022)
+- [Packages](./src/main/java/io/codelex/notes/day06/Packages.java)
+- Classes continued, see [Classes](./src/main/java/io/codelex/notes/day05/Classes.java), [SampleClass](./src/main/java/io/codelex/notes/day05/SampleClass.java)
+- [CurrencyConverter](./src/main/java/io/codelex/notes/day06/currencyconverter) - Example / practice application
