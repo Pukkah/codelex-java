@@ -37,3 +37,8 @@
 - [HackingTime](./src/main/java/io/codelex/notes/day04/HackingTime.java) - Example using RegEx to scrape data from webpage
 - <http://regexplanet.com>
 - <http://regexr.com>
+
+## [Day05](./src/main/java/io/codelex/notes/day05) (28.02.2022)
+- [Arrays](./src/main/java/io/codelex/notes/day05/Arrays.java)
+- [Methods](./src/main/java/io/codelex/notes/day05/Methods.java)
+- [Classes](./src/main/java/io/codelex/notes/day05/Classes.java), [SampleClass](./src/main/java/io/codelex/notes/day05/SampleClass.java)
