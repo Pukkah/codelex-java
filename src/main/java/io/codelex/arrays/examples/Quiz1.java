@@ -6,7 +6,7 @@ public class Quiz1 {
         System.out.println(array.length);
         // What will be the output?
         // 1. 7
-        // 2. 6
+        // 2. 6 <==
         // 3. 5
         // 4. compilation error
         // 5. runtime error
