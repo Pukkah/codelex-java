@@ -19,7 +19,7 @@ public class Exercise8 {
         while (true) {
 
             // print fancy line
-            for (int i = 0; i < 9 + WORDS[rand].length() * 2; i++) {
+            for (int i = 0; i < 9 + board.length * 2; i++) {
                 System.out.print(i % 2 == 0 ? '-' : '=');
             }
             System.out.println();
@@ -75,7 +75,7 @@ public class Exercise8 {
 
             // check if hit and place in board
             var hit = false;
-            for (int i = 0; i < WORDS[rand].length(); i++) {
+            for (int i = 0; i < board.length; i++) {
                 if (WORDS[rand].charAt(i) == guess) {
                     board[i] = guess;
                     hit = true;
