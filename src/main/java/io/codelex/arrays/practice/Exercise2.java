@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercise2 {
 
-    //TODO: Write a Java program to sum values of an array.
+    // Java program to sum values of an array.
     // Array values are starting from min (including) till max (including) number.
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -15,15 +15,16 @@ public class Exercise2 {
         System.out.println("Please enter a max number");
         int maxNumber = input.nextInt();
 
-        int myArray[];
+        int[] myArray = new int[maxNumber - minNumber + 1];
         int sum = 0;
 
-        /*
-        fixme
-        for (........) {
-        ........
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = i + minNumber;
         }
-        */
+
+        for (int number : myArray) {
+            sum += number;
+        }
 
         System.out.println("The sum is " + sum);
     }

@@ -11,7 +11,7 @@ public class Quiz2 {
         // What will be the output?
         // 1. 23 2
         // 2. 23
-        // 3. 23 23
+        // 3. 23 23 <==
         // 4. compilation error
         // 5. runtime error
     }
