@@ -43,6 +43,7 @@ public class Dog {
         // Same mother test
         System.out.println(dogs[0].hasSameMotherAs(dogs[3])); // expected true
         System.out.println(dogs[0].hasSameMotherAs(dogs[7])); // expected false
+        System.out.println(dogs[2].hasSameMotherAs(dogs[6])); // expected false
 
     }
 
@@ -70,7 +71,7 @@ public class Dog {
     }
 
     public boolean hasSameMotherAs(Dog otherDog) {
-        return mother == otherDog.mother;
+        return (mother != null || otherDog.mother != null) && mother == otherDog.mother;
     }
 
     @Override
