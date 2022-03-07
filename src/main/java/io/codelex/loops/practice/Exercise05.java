@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Exercise05 {
     public static void main(String[] args) {
 
+        final int LINE_WIDTH = 30;
+
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter first word: ");
@@ -13,12 +15,12 @@ public class Exercise05 {
         System.out.print("Enter second word: ");
         String secondWord = in.next();
 
+        int dotLeaderWidth = LINE_WIDTH - (firstWord.length() + secondWord.length());
         System.out.print(firstWord);
-        for (int i = 0; i < 30 - (firstWord.length() + secondWord.length()); i++) {
+        for (int i = 0; i < dotLeaderWidth; i++) {
             System.out.print('.');
         }
         System.out.print(secondWord);
-
 
     }
 }

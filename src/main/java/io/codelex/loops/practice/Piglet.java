@@ -1,5 +1,6 @@
 package io.codelex.loops.practice;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Piglet {
@@ -8,10 +9,11 @@ public class Piglet {
         System.out.println("Welcome to Piglet!");
 
         Scanner in = new Scanner(System.in);
+        Random dice = new Random();
 
         int points = 0;
         roll: while (true) {
-            int diceRoll = (int) ((Math.random() * (6)) + 1);
+            int diceRoll = dice.nextInt(1,7);
             System.out.printf("You rolled a %d!\n", diceRoll);
             if (diceRoll == 1) {
                 points = 0;
