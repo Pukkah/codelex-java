@@ -10,7 +10,7 @@ public class Exercise6 {
 
         Random random = new Random();
         for (int i = 0; i < arrayOne.length; i++) {
-            arrayOne[i] = random.nextInt(100 - 1) + 1;
+            arrayOne[i] = random.nextInt(100) + 1;
         }
 
         int[] arrayTwo = Arrays.copyOf(arrayOne, arrayOne.length);
