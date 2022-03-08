@@ -1,6 +1,7 @@
 package io.codelex.arrays.practice;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 // Hangman
@@ -8,13 +9,15 @@ public class Exercise8 {
 
     public static void main(String[] args) {
         // Settings and Data
+        final char LIFE_SYMBOL = '\u2665'; // ♥
         final String[] WORDS = {"one", "two", "three"};
         final int MAX_MISSES = 3;
 
         // init
-        final int seed = (int) (WORDS.length * Math.random());
+        int seed = new Random().nextInt(WORDS.length);
         char[] word = new char[WORDS[seed].length()];
         char[] misses = new char[MAX_MISSES];
+        Arrays.fill(misses, LIFE_SYMBOL);
 
         Scanner in = new Scanner(System.in);
 
@@ -22,7 +25,8 @@ public class Exercise8 {
         while (true) {
 
             // print fancy line
-            for (int i = 0; i < 9 + word.length * 2; i++) {
+            int fancyLineWidth = 9 + word.length * 2;
+            for (int i = 0; i < fancyLineWidth; i++) {
                 System.out.print(i % 2 == 0 ? '-' : '=');
             }
             System.out.println();
@@ -30,7 +34,7 @@ public class Exercise8 {
             // print word
             System.out.print("Word:  ");
             for (char ch : word) {
-                System.out.print(" " + (ch != 0 ? ch : "_"));
+                System.out.print(" " + (ch != 0 ? ch : '_'));
             }
             System.out.println();
 
@@ -40,7 +44,7 @@ public class Exercise8 {
                 if (ch != 0) {
                     System.out.print(ch);
                 } else {
-                    break;
+                    System.out.print(LIFE_SYMBOL);
                 }
             }
             System.out.println();
@@ -52,7 +56,7 @@ public class Exercise8 {
             }
 
             //check if lose
-            if (misses[MAX_MISSES-1] != 0) {
+            if (misses[MAX_MISSES-1] != LIFE_SYMBOL) {
                 System.out.println("Answer: " + WORDS[seed]);
                 System.out.println("You LOSE!");
                 break;
@@ -74,8 +78,9 @@ public class Exercise8 {
             // add miss
             if (!hit) {
                 for (int i = 0; i < MAX_MISSES; i++) {
-                    if (misses[i] == 0 || misses[i] == guess) {
+                    if (misses[i] == LIFE_SYMBOL || misses[i] == guess) {
                         misses[i] = guess;
+                        Arrays.sort(misses);
                         break;
                     }
                 }
