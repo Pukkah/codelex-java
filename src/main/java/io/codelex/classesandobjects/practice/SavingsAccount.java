@@ -34,10 +34,10 @@ public class SavingsAccount {
             savings.addInterest();
         }
 
-        System.out.printf("Total deposited: %.2f%n", savings.getDeposited());
-        System.out.printf("Total withdrawn: %.2f%n", savings.getWithdrawn());
-        System.out.printf("Interest earned: %.2f%n", savings.getInterestEarned());
-        System.out.printf("Ending balance: %.2f%n", savings.getBalance());
+        System.out.printf("Total deposited: $%-,3.2f%n", savings.getDeposited());
+        System.out.printf("Total withdrawn: $%-,3.2f%n", savings.getWithdrawn());
+        System.out.printf("Interest earned: $%-,3.2f%n", savings.getInterestEarned());
+        System.out.printf("Ending balance: $%-,3.2f%n", savings.getBalance());
 
     }
 
