@@ -6,87 +6,85 @@ import java.util.Scanner;
 
 // Hangman
 public class Exercise8 {
+    private static final String[] WORDS = { "one", "two", "three" };
+    private static final int MAX_MISSES = 3;
+    private static final char LIFE = '\u2665'; // ♥;
+
+    private static final int SEED = new Random().nextInt(WORDS.length);
+    private static final char[] WORD = WORDS[SEED].toCharArray();
+    private static final char[] BOARD = new char[WORD.length];
+    private static final char[] MISSES = new char[MAX_MISSES];
 
     public static void main(String[] args) {
-        // Settings and Data
-        final char LIFE_SYMBOL = '\u2665'; // ♥
-        final String[] WORDS = {"one", "two", "three"};
-        final int MAX_MISSES = 3;
-
-        // init
-        int seed = new Random().nextInt(WORDS.length);
-        char[] word = new char[WORDS[seed].length()];
-        char[] misses = new char[MAX_MISSES];
-        Arrays.fill(misses, LIFE_SYMBOL);
-
+        Arrays.fill(MISSES, LIFE);
         Scanner in = new Scanner(System.in);
 
-        // game loop
         while (true) {
+            printFancyLine();
+            System.out.println("Word:   " + getBoard());
+            System.out.println("Misses: " + String.valueOf(MISSES));
 
-            // print fancy line
-            int fancyLineWidth = 9 + word.length * 2;
-            for (int i = 0; i < fancyLineWidth; i++) {
-                System.out.print(i % 2 == 0 ? '-' : '=');
-            }
-            System.out.println();
-
-            // print word
-            System.out.print("Word:  ");
-            for (char ch : word) {
-                System.out.print(" " + (ch != 0 ? ch : '_'));
-            }
-            System.out.println();
-
-            // print Misses
-            System.out.print("Misses: ");
-            for (char ch : misses) {
-                if (ch != 0) {
-                    System.out.print(ch);
-                } else {
-                    System.out.print(LIFE_SYMBOL);
-                }
-            }
-            System.out.println();
-
-            // check if win
-            if (Arrays.equals(word, WORDS[seed].toCharArray())) {
+            if (isWinner()) {
                 System.out.println("You WIN!");
                 break;
             }
 
-            //check if lose
-            if (misses[MAX_MISSES-1] != LIFE_SYMBOL) {
-                System.out.println("Answer: " + WORDS[seed]);
+            if (isLoser()) {
+                System.out.println("Answer: " + String.valueOf(WORD));
                 System.out.println("You LOSE!");
                 break;
             }
 
-            // get input
             System.out.print("Guess:  ");
             char guess = in.nextLine().toLowerCase().charAt(0);
-
-            // check if hit and place in board
-            var hit = false;
-            for (int i = 0; i < word.length; i++) {
-                if (WORDS[seed].charAt(i) == guess) {
-                    word[i] = guess;
-                    hit = true;
-                }
-            }
-
-            // add miss
-            if (!hit) {
-                for (int i = 0; i < MAX_MISSES; i++) {
-                    if (misses[i] == LIFE_SYMBOL || misses[i] == guess) {
-                        misses[i] = guess;
-                        Arrays.sort(misses);
-                        break;
-                    }
-                }
-            }
-
+            guessCharacter(guess);
         }
-
     }
+
+    private static void guessCharacter(char guess) {
+        var hit = false;
+        for (int i = 0; i < BOARD.length; i++) {
+            if (WORD[i] == guess) {
+                BOARD[i] = guess;
+                hit = true;
+            }
+        }
+        if (!hit) { addMiss(guess); }
+    }
+
+    private static void addMiss(char character) {
+        for (int i = 0; i < MAX_MISSES; i++) {
+            if (MISSES[i] == LIFE || MISSES[i] == character) {
+                MISSES[i] = character;
+                Arrays.sort(MISSES);
+                break;
+            }
+        }
+    }
+
+    private static boolean isWinner() {
+        return Arrays.equals(BOARD, WORD);
+    }
+
+    private static boolean isLoser() {
+        return MISSES[MAX_MISSES - 1] != LIFE;
+    }
+
+    private static void printFancyLine() {
+        int width = 9 + WORD.length * 2;
+        for (int i = 0; i < width; i++) {
+            System.out.print((i % 2 == 0) ? '-' : '=');
+        }
+        System.out.println();
+    }
+
+    private static String getBoard() {
+        StringBuilder boardString = new StringBuilder();
+        for (char c : BOARD) {
+            boardString.append(" ");
+            boardString.append((c != 0) ? c : '_');
+        }
+        return boardString.substring(1);
+    }
+
 }
