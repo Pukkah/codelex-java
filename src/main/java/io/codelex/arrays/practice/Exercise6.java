@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Exercise6 {
+
     public static void main(String[] args) {
 
         int[] arrayOne = new int[10];
@@ -14,7 +15,6 @@ public class Exercise6 {
         }
 
         int[] arrayTwo = Arrays.copyOf(arrayOne, arrayOne.length);
-
         arrayOne[arrayOne.length - 1] = -7;
 
         System.out.println("Array 1: " + arrayToString(arrayOne));
@@ -22,7 +22,7 @@ public class Exercise6 {
 
     }
 
-    static String arrayToString(int[] array) {
+    private static String arrayToString(int[] array) {
         StringBuilder arrayAsString = new StringBuilder();
         for (int element : array) {
             arrayAsString.append(element);
