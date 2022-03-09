@@ -2,7 +2,7 @@
 
 ## [Day01](./src/main/java/io/codelex/notes/day01) (21.02.2022)
 - [Main](./src/main/java/io/codelex/notes/day01/Main.java) - `Scanner` un `System.in()` pamati
-- [PersonalID](./src/main/java/io/codelex/notes/day01/PersonalID.java) - Personas koda pārbaude
+- Personal Challenge: [PersonalID](./src/main/java/io/codelex/notes/day01/PersonalID.java) - Personas koda pārbaude
 
 ## [Day02](./src/main/java/io/codelex/notes/day02) (22.02.2022)
 - [GitHub access token and Git](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to)
@@ -34,7 +34,7 @@
 - [Exceptions](./src/main/java/io/codelex/notes/day04/Exceptions.java) - Catching and Throwing
 - [String.class](./src/main/java/io/codelex/notes/day04/StringClass.java) - String Object and Methods
 - [RegularExpressions](./src/main/java/io/codelex/notes/day04/RegularExpressions.java) - RegEx
-- [HackingTime](./src/main/java/io/codelex/notes/day04/HackingTime.java) - Example using RegEx to scrape data from webpage
+- Code Example: [HackingTime](./src/main/java/io/codelex/notes/day04/HackingTime.java) - Example using RegEx to scrape data from webpage
 - <http://regexplanet.com>
 - <http://regexr.com>
 
@@ -46,4 +46,14 @@
 ## [Day06](./src/main/java/io/codelex/notes/day06) (02.03.2022)
 - [Packages](./src/main/java/io/codelex/notes/day06/Packages.java)
 - Classes continued, see [Classes](./src/main/java/io/codelex/notes/day05/Classes.java), [SampleClass](./src/main/java/io/codelex/notes/day05/SampleClass.java)
-- [CurrencyConverter](./src/main/java/io/codelex/notes/day06/currencyconverter) - Example / practice application
+- Code Example: [CurrencyConverter](./src/main/java/io/codelex/notes/day06/currencyconverter) - Example / practice application
+
+## Day07 (04.03.2022)
+TODO
+
+## [Day08](./src/main/java/io/codelex/notes/day08) (07.03.2022)
+- [DateAndTime](./src/main/java/io/codelex/notes/day08/DateAndTime.java) `LocalTime`, `LocalDate` , `LocalDateTime`, `Instant`, `Period`, `Duration`
+- [Varargs](./src/main/java/io/codelex/notes/day08/Varargs.java)
+- [Lists](./src/main/java/io/codelex/notes/day08/Lists.java)
+- Code Example: [ChainAndLink](./src/main/java/io/codelex/notes/day08/ChainAndLink.java) -> [Chain](./src/main/java/io/codelex/notes/day08/chain/Chain.java) -> [Link](./src/main/java/io/codelex/notes/day08/chain/Link.java)
+- Exercise: [POINT.md](./src/main/java/io/codelex/notes/day08/POINT.md) -> [Point](./src/main/java/io/codelex/notes/day08/Point.java)
