@@ -6,7 +6,6 @@ package io.codelex.classesandobjects.practice;
 import java.text.DecimalFormat;
 
 public class BankAccount {
-
     public String name;
     public double balance;
 

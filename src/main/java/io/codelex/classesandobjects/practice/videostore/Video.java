@@ -1,7 +1,6 @@
 package io.codelex.classesandobjects.practice.videostore;
 
 public class Video {
-
     private String title;
     private boolean checkedOut;
     private int totalRating;
