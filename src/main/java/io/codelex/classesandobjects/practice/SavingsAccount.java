@@ -6,7 +6,6 @@ import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class SavingsAccount {
-
     private BigDecimal balance;
     private BigDecimal interest;
     private BigDecimal deposited = new BigDecimal(0);
