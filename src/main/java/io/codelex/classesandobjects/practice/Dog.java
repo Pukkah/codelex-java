@@ -1,15 +1,20 @@
 package io.codelex.classesandobjects.practice;
 
 public class Dog {
-    public enum Sex { // jā, šī varētu būt atsevišķa klase, bet ērtības labad vēlos iekļauties vienā failā...
-        MALE,
-        FEMALE
-    }
-
     private String name;
     private Sex sex;
     private Dog mother;
     private Dog father;
+
+    public Dog(String name, Sex sex, Dog mother, Dog father) {
+        this(name, sex);
+        assignParents(mother, father);
+    }
+
+    public Dog(String name, Sex sex) {
+        this.name = name;
+        this.sex = sex;
+    }
 
     public static void main(String[] args) {
 
@@ -47,16 +52,6 @@ public class Dog {
 
     }
 
-    public Dog(String name, Sex sex) {
-        this.name = name;
-        this.sex = sex;
-    }
-
-    public Dog(String name, Sex sex, Dog mother, Dog father) {
-        this(name, sex);
-        assignParents(mother, father);
-    }
-
     public void assignParents(Dog mother, Dog father) {
         this.mother = mother;
         this.father = father;
@@ -78,4 +73,9 @@ public class Dog {
     public String toString() {
         return String.format("%s (%s)", name, sex);
     }
+
+    public enum Sex { // jā, šī varētu būt atsevišķa klase, bet ērtības labad vēlos iekļauties vienā failā...
+        MALE, FEMALE
+    }
+
 }

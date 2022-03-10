@@ -7,6 +7,17 @@ import java.util.Scanner;
 
 public class SavingsAccount {
 
+    private BigDecimal balance;
+    private BigDecimal interest;
+    private BigDecimal deposited = new BigDecimal(0);
+    private BigDecimal withdrawn = new BigDecimal(0);
+    private BigDecimal interestEarned = new BigDecimal(0);
+
+    public SavingsAccount(BigDecimal startingBalance, BigDecimal annualInterestRate) {
+        balance = startingBalance;
+        interest = annualInterestRate.divide(BigDecimal.valueOf(100)).divide(BigDecimal.valueOf(12.0), MathContext.DECIMAL32);
+    }
+
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
@@ -41,32 +52,9 @@ public class SavingsAccount {
 
     }
 
-    private BigDecimal balance;
-    private BigDecimal interest;
-    private BigDecimal deposited = new BigDecimal(0);
-    private BigDecimal withdrawn = new BigDecimal(0);
-    private BigDecimal interestEarned = new BigDecimal(0);
-
-
-    public SavingsAccount(BigDecimal startingBalance, BigDecimal annualInterestRate) {
-        balance = startingBalance;
-        interest = annualInterestRate.divide(BigDecimal.valueOf(100)).divide(BigDecimal.valueOf(12.0), MathContext.DECIMAL32);
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
-    }
-
-    public BigDecimal getDeposited() {
-        return deposited;
-    }
-
-    public BigDecimal getWithdrawn() {
-        return  withdrawn;
-    }
-
-    public BigDecimal getInterestEarned() {
-        return interestEarned;
+    public void deposit(BigDecimal amount) {
+        balance = balance.add(amount);
+        deposited = deposited.add(amount);
     }
 
     public void withdraw(BigDecimal amount) {
@@ -78,15 +66,26 @@ public class SavingsAccount {
         }
     }
 
-    public void deposit(BigDecimal amount) {
-        balance = balance.add(amount);
-        deposited = deposited.add(amount);
-    }
-
     public void addInterest() {
         BigDecimal interestAmount = balance.multiply(interest).setScale(2, RoundingMode.DOWN);
         balance = balance.add(interestAmount);
         interestEarned = interestEarned.add(interestAmount);
+    }
+
+    public BigDecimal getDeposited() {
+        return deposited;
+    }
+
+    public BigDecimal getWithdrawn() {
+        return withdrawn;
+    }
+
+    public BigDecimal getInterestEarned() {
+        return interestEarned;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
     }
 
 }

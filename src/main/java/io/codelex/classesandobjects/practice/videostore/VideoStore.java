@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VideoStore {
-
     private Map<String, Video> inventory;
 
     public VideoStore() {
@@ -15,8 +14,10 @@ public class VideoStore {
         inventory.put(title, new Video(title));
     }
 
-    public boolean hasVideo(String title) {
-        return inventory.containsKey(title);
+    public void rentVideo(String title) {
+        if (hasVideoInStock(title)) {
+            inventory.get(title).checkOut();
+        }
     }
 
     public boolean hasVideoInStock(String title) {
@@ -26,10 +27,8 @@ public class VideoStore {
         return false;
     }
 
-    public void rentVideo(String title) {
-        if (hasVideoInStock(title)) {
-            inventory.get(title).checkOut();
-        }
+    public boolean hasVideo(String title) {
+        return inventory.containsKey(title);
     }
 
     public void returnVideo(String title) {
@@ -43,7 +42,6 @@ public class VideoStore {
             inventory.get(title).addRating(rating);
         }
     }
-
 
     public void listInventory() {
         for (Video item : inventory.values()) {

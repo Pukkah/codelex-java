@@ -12,28 +12,17 @@ public class Video {
         checkedOut = false;
     }
 
-    public void checkOut(){
+    public void checkOut() {
         checkedOut = true;
     }
 
-    public void checkIn(){
+    public void checkIn() {
         checkedOut = false;
-    }
-
-    public boolean isCheckedOut(){
-        return checkedOut;
     }
 
     public void addRating(int rating) {
         totalRating += rating;
         ratings++;
-    }
-
-    public double getRating() {
-        if (ratings > 0) {
-            return (double) totalRating / ratings;
-        }
-        return 0;
     }
 
     public String getTitle() {
@@ -44,4 +33,16 @@ public class Video {
     public String toString() {
         return String.format("\"%s\" (%.1f) %s", title, getRating(), (isCheckedOut() ? "Out" : "Available"));
     }
+
+    public double getRating() {
+        if (ratings > 0) {
+            return (double) totalRating / ratings;
+        }
+        return 0;
+    }
+
+    public boolean isCheckedOut() {
+        return checkedOut;
+    }
+
 }

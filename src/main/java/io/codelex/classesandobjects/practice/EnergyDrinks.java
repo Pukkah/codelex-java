@@ -18,4 +18,5 @@ public class EnergyDrinks {
     public static double calculatePreferCitrus(int numberSurveyed) {
         return numberSurveyed * PURCHASED_ENERGY_DRINKS * PREFER_CITRUS_DRINKS;
     }
+
 }

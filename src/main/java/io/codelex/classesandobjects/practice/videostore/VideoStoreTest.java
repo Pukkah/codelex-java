@@ -70,4 +70,5 @@ public class VideoStoreTest {
             scanner.nextLine(); // clear input queue
         }
     }
+
 }
