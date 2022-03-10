@@ -8,6 +8,10 @@
 - [GitHub access token and Git](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to)
 - [Main](./src/main/java/io/codelex/notes/day02/Main.java) - Operators...
 
+> Exercises:
+> [Types and Variables](./src/main/java/io/codelex/typesandvariables/practice/README.md),
+> [Arithmetic](./src/main/java/io/codelex/arithmetic/practice/README.md)
+
 ## [Day03](./src/main/java/io/codelex/notes/day03) (23.02.2022)
 - [Main](./src/main/java/io/codelex/notes/day03/Main.java) - Casting, Control flow, loops...
 - <details><summary>Update Branch before Pull</summary>
@@ -30,6 +34,10 @@
   </p>
 </details>
 
+> Exercises:
+> [Flow-control](./src/main/java/io/codelex/flowcontrol/practice/README.md),
+> [Loops](./src/main/java/io/codelex/loops/practice/README.md)
+
 ## [Day04](./src/main/java/io/codelex/notes/day04) (25.02.2022)
 - [Exceptions](./src/main/java/io/codelex/notes/day04/Exceptions.java) - Catching and Throwing
 - [String.class](./src/main/java/io/codelex/notes/day04/StringClass.java) - String Object and Methods
@@ -43,10 +51,16 @@
 - [Methods](./src/main/java/io/codelex/notes/day05/Methods.java)
 - [Classes](./src/main/java/io/codelex/notes/day05/Classes.java), [SampleClass](./src/main/java/io/codelex/notes/day05/SampleClass.java)
 
+> Exercises:
+> [Arrays](./src/main/java/io/codelex/arrays/practice/README.md)
+
 ## [Day06](./src/main/java/io/codelex/notes/day06) (02.03.2022)
 - [Packages](./src/main/java/io/codelex/notes/day06/Packages.java)
 - Classes continued, see [Classes](./src/main/java/io/codelex/notes/day05/Classes.java), [SampleClass](./src/main/java/io/codelex/notes/day05/SampleClass.java)
 - Code Example: [CurrencyConverter](./src/main/java/io/codelex/notes/day06/currencyconverter) - Example / practice application
+
+> Exercises:
+> [Classes and Objects](./src/main/java/io/codelex/classesandobjects/practice/README.md)
 
 ## Day07 (04.03.2022)
 TODO
@@ -57,3 +71,8 @@ TODO
 - [Lists](./src/main/java/io/codelex/notes/day08/Lists.java)
 - Code Example: [ChainAndLink](./src/main/java/io/codelex/notes/day08/ChainAndLink.java) -> [Chain](./src/main/java/io/codelex/notes/day08/chain/Chain.java) -> [Link](./src/main/java/io/codelex/notes/day08/chain/Link.java)
 - Exercise: [POINT.md](./src/main/java/io/codelex/notes/day08/POINT.md) -> [Point](./src/main/java/io/codelex/notes/day08/Point.java)
+
+## Day09 (09.03.2022)
+- Code Style...
+> Exercises:
+> [Date and Time](./src/main/java/io/codelex/dateandtime/practice/README.md)
