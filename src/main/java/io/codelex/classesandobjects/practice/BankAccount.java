@@ -7,6 +7,14 @@ import java.text.DecimalFormat;
 
 public class BankAccount {
 
+    public String name;
+    public double balance;
+
+    public BankAccount(String name, double balance) {
+        this.name = name;
+        this.balance = balance;
+    }
+
     public static void main(String[] args) {
 
         // positive balance account
@@ -17,15 +25,6 @@ public class BankAccount {
         BankAccount badAccount = new BankAccount("Putins", -99999999);
         System.out.println(badAccount);
 
-    }
-
-
-    public String name;
-    public double balance;
-
-    public BankAccount(String name, double balance) {
-        this.name = name;
-        this.balance = balance;
     }
 
     public final void deposit(double amount) {

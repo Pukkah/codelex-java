@@ -2,6 +2,14 @@ package io.codelex.classesandobjects.practice;
 
 public class Point {
 
+    public int x;
+    public int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public static void main(String[] args) {
 
         Point p1 = new Point(5, 2);
@@ -10,14 +18,6 @@ public class Point {
         System.out.println("(" + p1.x + ", " + p1.y + ")");
         System.out.println("(" + p2.x + ", " + p2.y + ")");
 
-    }
-
-    public int x;
-    public int y;
-
-    public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
     }
 
     public static void swapPoints(Point a, Point b) {
