@@ -1,10 +1,19 @@
 package io.codelex.classesandobjects.practice;
 
 public class Car {
-
     private double startKilometers; // Starting odometer reading
     private double endKilometers; // Ending odometer reading
     private double liters; // Liters of gas used between the readings
+
+    public Car(double startKilometers, double endKilometers, double liters) {
+        this(startKilometers);
+        this.endKilometers = endKilometers;
+        this.liters = liters;
+    }
+
+    public Car(double startKilometers) {
+        this.startKilometers = startKilometers;
+    }
 
     public static void main(String[] args) {
 
@@ -27,21 +36,6 @@ public class Car {
 
     }
 
-    public Car(double startKilometers) {
-        this.startKilometers = startKilometers;
-    }
-
-    public Car(double startKilometers, double endKilometers, double liters) {
-        this(startKilometers);
-        this.endKilometers = endKilometers;
-        this.liters = liters;
-    }
-
-    public void fillUp(double endKilometers, double liters){
-        this.endKilometers = endKilometers;
-        this.liters += liters;
-    }
-
     public double calculateConsumption() {
         return liters / (endKilometers - startKilometers) * 100;
     }
@@ -52,6 +46,11 @@ public class Car {
 
     public boolean economyCar() {
         return calculateConsumption() < 5.0;
+    }
+
+    public void fillUp(double endKilometers, double liters) {
+        this.endKilometers = endKilometers;
+        this.liters += liters;
     }
 
 }

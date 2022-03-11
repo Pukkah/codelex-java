@@ -1,10 +1,15 @@
 package io.codelex.classesandobjects.practice;
 
 public class Product {
-
     private String name;
     private double price;
     private int amount;
+
+    public Product(String name, double priceAtStart, int amountAtStart) {
+        this.name = name;
+        price = priceAtStart;
+        amount = amountAtStart;
+    }
 
     public static void main(String[] args) {
 
@@ -28,10 +33,8 @@ public class Product {
 
     }
 
-    public Product(String name, double priceAtStart, int amountAtStart) {
-        this.name = name;
-        price = priceAtStart;
-        amount = amountAtStart;
+    public void printProduct() {
+        System.out.printf("\"%s\", %.2f EUR, %d units%n", name, price, amount);
     }
 
     public String getName() {
@@ -53,11 +56,5 @@ public class Product {
     public void setAmount(int amount) {
         this.amount = amount;
     }
-
-    public void printProduct() {
-        System.out.printf("\"%s\", %.2f EUR, %d units%n", name, price, amount);
-    }
-
-
 
 }

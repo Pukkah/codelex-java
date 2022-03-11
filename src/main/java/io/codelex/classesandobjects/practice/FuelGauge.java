@@ -1,9 +1,18 @@
 package io.codelex.classesandobjects.practice;
 
 public class FuelGauge {
+    private static final int MAX_FUEL = 70;
+    private int fuel;
+
+    public FuelGauge() {
+        this(0);
+    }
+
+    public FuelGauge(int fuel) {
+        this.fuel = Math.min(fuel, MAX_FUEL);
+    }
 
     public static void main(String[] args) {
-        // Class tests
         FuelGauge fuel = new FuelGauge(69);
         fuel.printFuel();
         fuel.addFuel();
@@ -13,34 +22,24 @@ public class FuelGauge {
         fuel.printFuel();
     }
 
-    private static final int MAX_FUEL = 70;
-    private int fuel;
-
-    public FuelGauge() {
+    public void printFuel() {
+        System.out.printf("Fuel: %d/%d%n", fuel, MAX_FUEL);
     }
 
-    public FuelGauge(int fuel) {
-        this.fuel = Math.min(fuel, MAX_FUEL);
+    public void addFuel() {
+        if (fuel < MAX_FUEL) { fuel++; }
+    }
+
+    public void burnFuel() {
+        if (fuel > 0) { fuel--; }
     }
 
     public int getFuel() {
         return fuel;
     }
 
-    public void printFuel() {
-        System.out.printf("Fuel: %d/%d%n", fuel, MAX_FUEL);
-    }
-
     public boolean hasFuel() {
         return fuel > 0;
-    }
-
-    public void addFuel() {
-        if (fuel < MAX_FUEL) fuel++;
-    }
-
-    public void burnFuel() {
-        if (fuel > 0) fuel--;
     }
 
 }
