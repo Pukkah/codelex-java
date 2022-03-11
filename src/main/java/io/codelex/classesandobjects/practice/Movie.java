@@ -3,6 +3,19 @@ package io.codelex.classesandobjects.practice;
 import java.util.Arrays;
 
 public class Movie {
+    private String title;
+    private String studio;
+    private String rating;
+
+    public Movie(String title, String studio) {
+        this(title, studio, "PG");
+    }
+
+    public Movie(String title, String studio, String rating) {
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
 
     public static void main(String[] args) {
 
@@ -19,20 +32,6 @@ public class Movie {
         Movie[] moviesPG = Movie.getPG(movies);
         System.out.println(Arrays.toString(moviesPG));
 
-    }
-
-    private String title;
-    private String studio;
-    private String rating;
-
-    public Movie(String title, String studio, String rating) {
-        this.title = title;
-        this.studio = studio;
-        this.rating = rating;
-    }
-
-    public Movie(String title, String studio) {
-        this(title, studio, "PG");
     }
 
     public static Movie[] getPG(Movie[] movies) {

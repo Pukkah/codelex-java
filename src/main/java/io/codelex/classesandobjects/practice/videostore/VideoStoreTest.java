@@ -7,6 +7,7 @@ public class VideoStoreTest {
     private static final VideoStore STORE = new VideoStore();
 
     public static void main(String[] args) {
+
         final Scanner keyboard = new Scanner(System.in);
 
         while (true) {
@@ -37,8 +38,8 @@ public class VideoStoreTest {
                 default:
                     break;
             }
-
         }
+
     }
 
     private static void fillVideoStore(Scanner scanner) {
