@@ -36,8 +36,8 @@ public class Movie {
 
     public static Movie[] getPG(Movie[] movies) {
         return Arrays.stream(movies)
-                .filter(movie -> movie.rating.equals("PG"))
-                .toArray(Movie[]::new);
+                     .filter(movie -> movie.rating.equals("PG"))
+                     .toArray(Movie[]::new);
     }
 
     @Override

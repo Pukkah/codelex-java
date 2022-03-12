@@ -14,7 +14,8 @@ public class SavingsAccount {
 
     public SavingsAccount(BigDecimal startingBalance, BigDecimal annualInterestRate) {
         balance = startingBalance;
-        interest = annualInterestRate.divide(BigDecimal.valueOf(100)).divide(BigDecimal.valueOf(12.0), MathContext.DECIMAL32);
+        interest = annualInterestRate.divide(BigDecimal.valueOf(100))
+                                     .divide(BigDecimal.valueOf(12.0), MathContext.DECIMAL32);
     }
 
     public static void main(String[] args) {
