@@ -1,23 +1,21 @@
 package io.codelex.classesandobjects.practice;
 
 public class Odometer {
+    private static final int MAX_ODO_VALUE = 1000000;
+    private static final int KILOMETERS_PER_LITER = 10;
     private int kilometers;
     private int counter;
     private FuelGauge fuel;
 
     public Odometer(FuelGauge fuel, int kilometers) {
-        this(fuel);
-        this.kilometers = kilometers % 1000000;
-    }
-
-    public Odometer(FuelGauge fuel) {
+        this.kilometers = kilometers % MAX_ODO_VALUE;
         this.fuel = fuel;
     }
 
     public static void main(String[] args) {
 
         // create FuelGauge and fill it
-        FuelGauge fuel = new FuelGauge();
+        FuelGauge fuel = new FuelGauge(0);
         while (fuel.getFuel() < 5) {
             fuel.addFuel();
         }
@@ -36,10 +34,10 @@ public class Odometer {
         // return if out of fuel
         if (!fuel.hasFuel()) { return; }
         // else continue
-        if (++kilometers > 999999) {
-            kilometers %= 1000000;
+        if (++kilometers >= MAX_ODO_VALUE) {
+            kilometers %= MAX_ODO_VALUE;
         }
-        if (++counter == 10) {
+        if (++counter == KILOMETERS_PER_LITER) {
             fuel.burnFuel();
             counter = 0;
         }
