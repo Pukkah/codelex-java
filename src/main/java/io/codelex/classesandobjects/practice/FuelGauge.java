@@ -4,10 +4,6 @@ public class FuelGauge {
     private static final int MAX_FUEL = 70;
     private int fuel;
 
-    public FuelGauge() {
-        this(0);
-    }
-
     public FuelGauge(int fuel) {
         this.fuel = Math.min(fuel, MAX_FUEL);
     }

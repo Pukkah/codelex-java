@@ -20,12 +20,15 @@ public class Point {
     }
 
     public static void swapPoints(Point a, Point b) {
-        int tempX = a.x;
-        int tempY = a.y;
-        a.x = b.x;
-        a.y = b.y;
-        b.x = tempX;
-        b.y = tempY;
+        int ax = a.x;
+        int ay = a.y;
+        a.updatePoint(b.x, b.y);
+        b.updatePoint(ax, ay);
+    }
+
+    public void updatePoint(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
 }
