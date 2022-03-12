@@ -3,7 +3,16 @@ package io.codelex.dateandtime.practice;
 import java.time.LocalDate;
 
 public class DatePeriod {
+    private final LocalDate start;
+    private final LocalDate end;
+
+    public DatePeriod(LocalDate start, LocalDate end) {
+        this.start = start;
+        this.end = end;
+    }
+
     public static void main(String[] args) {
+
         LocalDate firstStart = LocalDate.of(2022, 1, 1);
         LocalDate firstEnd = LocalDate.of(2022, 1, 15);
         DatePeriod firstPeriod = new DatePeriod(firstStart, firstEnd);
@@ -16,14 +25,7 @@ public class DatePeriod {
 
         //overlap variable should have start date 10.01.2022 and end date 15.01.2022
         System.out.println(overlap.start + " - " + overlap.end);
-    }
 
-    private LocalDate start;
-    private LocalDate end;
-
-    public DatePeriod(LocalDate start, LocalDate end) {
-        this.start = start;
-        this.end = end;
     }
 
     public DatePeriod intersection(DatePeriod other) {

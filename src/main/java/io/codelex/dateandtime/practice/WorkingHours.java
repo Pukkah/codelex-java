@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class WorkingHours {
     public static void main(String[] args) {
+
         System.out.println("[Date format 06-04-1988 (date-month-year)]");
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyy");
 
@@ -25,4 +26,5 @@ public class WorkingHours {
         System.out.println("Spent " + hoursWorked + " hours working.");
 
     }
+
 }
