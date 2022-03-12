@@ -23,11 +23,15 @@ public class FuelGauge {
     }
 
     public void addFuel() {
-        if (fuel < MAX_FUEL) { fuel++; }
+        if (fuel < MAX_FUEL) {
+            fuel++;
+        }
     }
 
     public void burnFuel() {
-        if (fuel > 0) { fuel--; }
+        if (fuel > 0) {
+            fuel--;
+        }
     }
 
     public int getFuel() {

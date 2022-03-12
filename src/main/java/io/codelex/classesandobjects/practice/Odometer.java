@@ -32,7 +32,9 @@ public class Odometer {
 
     public void addKilometer() {
         // return if out of fuel
-        if (!fuel.hasFuel()) { return; }
+        if (!fuel.hasFuel()) {
+            return;
+        }
         // else continue
         if (++kilometers >= MAX_ODO_VALUE) {
             kilometers %= MAX_ODO_VALUE;
