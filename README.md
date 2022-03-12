@@ -74,5 +74,11 @@ TODO
 
 ## Day09 (09.03.2022)
 - Code Style...
+
 > Exercises:
 > [Date and Time](./src/main/java/io/codelex/dateandtime/practice/README.md)
+
+## [Day10](./src/main/java/io/codelex/notes/day10) (11.03.2022)
+- Basic Java Quiz - Practical test: Implement [Author](./src/main/java/io/codelex/notes/day10/quiz/Author.java), so it works with [AuthorTest](./src/main/java/io/codelex/notes/day10/quiz/AuthorTest.java)
+- Code Example: [PasswordValidator](./src/main/java/io/codelex/notes/day10/PasswordValidator.java) - Compare strings with execution time hack protection.
+- CodinGame: [WavyText](./src/main/java/io/codelex/notes/day10/WavyText.java) (my implementation)
