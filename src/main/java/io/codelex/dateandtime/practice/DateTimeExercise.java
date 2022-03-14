@@ -18,7 +18,7 @@ public class DateTimeExercise {
     }
 
     public static LocalDate findNextFriday13th(LocalDate from) {
-        if (from.getDayOfMonth() > 13) {
+        if (from.getDayOfMonth() >= 13) {
             from = from.plusMonths(1);
         }
         from = from.withDayOfMonth(13);
