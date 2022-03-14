@@ -3,6 +3,7 @@ package io.codelex.notes.day09;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class GapFiller {
@@ -16,7 +17,8 @@ public class GapFiller {
 
         while (in.hasNextLine()) {
             String s = in.nextLine();
-            String result = pattern.matcher(s).replaceAll(matchResult -> "#".repeat(matchResult.group().length()));
+            Matcher match = pattern.matcher(s);
+            String result = match.replaceAll(matchResult -> "#".repeat(matchResult.group().length()));
             System.out.println(result);
         }
 
