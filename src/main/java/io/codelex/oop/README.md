@@ -6,21 +6,22 @@
 
 Package: shapes
 1) Write an abstract class Shape
-   – Data members: numSides (number of sides)
-   – Constructor: initialize numSides
-   – Concrete method: get method for numSides
-   – Abstract methods: getArea(), getPerimeter()
+   - Data members: numSides (number of sides)
+   - Constructor: initialize numSides
+   - Concrete method: get method for numSides
+   - Abstract methods: getArea(), getPerimeter()
+
 2) Write a concrete subclass Rectangle
-   – Data members: width, height
+   - Data members: width, height
 3) Write a concrete subclass Triangle
-   – Data members: width, height
+   - Data members: width, height
 4) In another class, write a main method to define a Rectangle and a Triangle and test their functionality
 
 ## Exercise #2
 
 Package: persons
 1) Write an abstract class Person
-- Data members: firstName, lastName, id (String), age
+-Data members: firstName, lastName, id (String), age
 - Constructor: initialize all data variables
 - Concrete methods: getFirstName, getLastName, getId, getAge
 - Abstract methods: getInfo that returns String
