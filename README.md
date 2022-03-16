@@ -82,3 +82,14 @@ TODO
 - Basic Java Quiz - Practical test: Implement [Author](./src/main/java/io/codelex/notes/day10/quiz/Author.java), so it works with [AuthorTest](./src/main/java/io/codelex/notes/day10/quiz/AuthorTest.java)
 - Code Example: [PasswordValidator](./src/main/java/io/codelex/notes/day10/PasswordValidator.java) - Compare strings with execution time hack protection.
 - CodinGame: [WavyText](./src/main/java/io/codelex/notes/day10/WavyText.java) (my implementation)
+
+## Day11 (14.03.2022)
+- Abstract Classes
+- Inner Classes
+- Anonymous Classes
+
+## [Day12](./src/main/java/io/codelex/notes/day12) (16.03.2022)
+- Resolving Git Merge Conflicts
+- Interfaces
+- Termini - Polymorphism, Inheritance, Composition, Encapsulation, Abstraction
+- Enums
