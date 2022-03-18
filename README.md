@@ -93,3 +93,8 @@ TODO
 - Interfaces
 - Termini - Polymorphism, Inheritance, Composition, Encapsulation, Abstraction
 - Enums
+
+## Day13
+- Exception Handling
+- Annotation
+- Reflection - accessing and modifying private fields
