@@ -2,7 +2,7 @@ package io.codelex.oop.computers;
 
 import java.util.Objects;
 
-public class Laptop extends Computer{
+public class Laptop extends Computer {
     private int batteryInMAh;
 
     public Laptop(String company, String model, String processor, String graphicsCard, int ramInGB, int batteryInMAh) {

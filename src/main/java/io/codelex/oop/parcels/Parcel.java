@@ -36,7 +36,7 @@ public class Parcel implements Validatable {
         }
         if (weight > 30) {
             System.out.println("Parcel too heavy");
-            validation=  false;
+            validation = false;
         }
         if (isExpress && weight > 15) {
             System.out.println("Parcel too heavy for express!");

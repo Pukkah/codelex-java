@@ -22,5 +22,5 @@ public enum Runner {
         }
         return ADVANCED;
     }
-    
+
 }
