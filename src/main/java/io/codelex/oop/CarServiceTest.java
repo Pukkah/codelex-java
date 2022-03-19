@@ -25,6 +25,7 @@ public class CarServiceTest {
         List<Car> weirdList = service.getCarsByManufacturerYearOfEstablishment(Operator.EQUAL_TO, 3000);
         System.out.println(weirdList);
         // TODO
+        System.out.println(service.getSortedCars(CarSortParameter.YEAR, true));
 
     }
 

@@ -47,16 +47,10 @@ public class CarService {
                    .toList();
     }
 
-    public List<Car> getSortedCars(boolean ascending) {
-        if (ascending) {
-            return cars.stream()
-                       .sorted(Comparator.comparing(Car::getName))
-                       .toList();
-        }
+    public List<Car> getSortedCars(CarSortParameter parameter, boolean ascending) {
         return cars.stream()
-                   .sorted(Comparator.comparing(Car::getName).reversed())
+                   .sorted(CarSortParameter.by(parameter, ascending))
                    .toList();
-
     }
 
     public boolean hasCarInList(Car car) {
