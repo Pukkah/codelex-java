@@ -98,3 +98,7 @@ TODO
 - Exception Handling
 - Annotation
 - Reflection - accessing and modifying private fields
+
+## Day14 (21.03.2022)
+- Collections - Set, List, Queue and Stack, Map
+- Generics
