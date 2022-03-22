@@ -25,11 +25,17 @@ public class ServerUpdate {
         LocalDate date = serverLaunched;
         while (date.isBefore(monthInQuestion.plusMonths(1))) {
             date = date.plusDays(14);
-            if (date.getYear() == monthInQuestion.getYear() && date.getMonth() == monthInQuestion.getMonth()) {
+            if (isSameMonthAndYear(date, monthInQuestion)) {
                 System.out.println(date);
             }
         }
 
+    }
+
+    private static boolean isSameMonthAndYear(LocalDate date, LocalDate otherDate) {
+        boolean isSameMonth = date.getYear() == otherDate.getYear();
+        boolean isSameYear = date.getMonth() == otherDate.getMonth();
+        return isSameMonth && isSameYear;
     }
 
 }

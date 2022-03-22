@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class WorkingHours {
     public static void main(String[] args) {
+        final int workHoursInDay = 8;
 
         System.out.println("[Date format 06-04-1988 (date-month-year)]");
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyy");
@@ -19,12 +20,19 @@ public class WorkingHours {
 
         int hoursWorked = 0;
         for (LocalDate date = startDate; date.isBefore(endDate); date = date.plusDays(1)) {
-            if (date.getDayOfWeek() != DayOfWeek.SATURDAY && date.getDayOfWeek() != DayOfWeek.SUNDAY) {
-                hoursWorked += 8;
+            if (isWorkDay(date)) {
+                hoursWorked += workHoursInDay;
             }
         }
         System.out.println("Spent " + hoursWorked + " hours working.");
 
+    }
+
+    private static boolean isWorkDay(LocalDate date) {
+        return switch (date.getDayOfWeek()) {
+            case SATURDAY, SUNDAY -> false;
+            default -> true;
+        };
     }
 
 }
