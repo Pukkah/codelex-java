@@ -1,7 +1,6 @@
 package io.codelex.exceptions.practice;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
