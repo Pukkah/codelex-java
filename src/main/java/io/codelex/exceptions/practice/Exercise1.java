@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Exercise1 {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
-        final Pattern quit = Pattern.compile("^q.*", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
+        final Pattern quit = Pattern.compile("q.*", Pattern.CASE_INSENSITIVE);
 
         while (true) {
             System.out.print("Enter the numerator: ");
