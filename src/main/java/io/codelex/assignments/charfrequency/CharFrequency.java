@@ -8,23 +8,22 @@ import java.util.Map;
 
 public class CharFrequency {
     public static Map<Character, Integer> fromFile(File file) throws IOException {
-        final int offset = 'a' - 'A';
-        int[] frequency = new int['Z' + 1];
+        final int indexOffset = 'a';
+        final int caseOffset = 'a' - 'A';
+        int[] frequency = new int['Z' - 'A' + 1];
         try (FileReader reader = new FileReader(file)) {
             int data;
             while ((data = reader.read()) != -1) {
                 if (data >= 'a' && data <= 'z') {
-                    ++frequency[data - offset];
+                    ++frequency[data - indexOffset];
                 } else if (data >= 'A' && data <= 'Z') {
-                    ++frequency[data];
+                    ++frequency[data - indexOffset + caseOffset];
                 }
             }
         }
         Map<Character, Integer> freqMap = new HashMap<>();
-        for (int i = 'A'; i <= 'Z'; i++) {
-            if (frequency[i] != 0) {
-                freqMap.put((char) (i + offset), frequency[i]);
-            }
+        for (int i = 0; i < frequency.length; i++) {
+            freqMap.put((char) (i + indexOffset), frequency[i]);
         }
         return freqMap;
     }
