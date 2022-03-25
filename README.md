@@ -132,3 +132,8 @@ TODO
 
 - I/O (Input/Output) Operations - java.io, java.nio
 - TDD - JUnit 5
+
+## [Day15](./src/main/java/io/codelex/notes/day16) (25.03.2022)
+
+- Functional Programming
+- Stream API
