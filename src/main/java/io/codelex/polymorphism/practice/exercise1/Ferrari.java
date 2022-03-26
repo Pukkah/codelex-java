@@ -1,6 +1,6 @@
 package io.codelex.polymorphism.practice.exercise1;
 
-public class Audi implements Car {
+public class Ferrari implements Car, NitrousOxideEngine {
     private int currentSpeed = 0;
 
     public void speedUp() {
@@ -13,6 +13,10 @@ public class Audi implements Car {
 
     public int showCurrentSpeed() {
         return currentSpeed;
+    }
+
+    public void useNitrousOxideEngine() {
+        currentSpeed = currentSpeed + 25;
     }
 
 }
