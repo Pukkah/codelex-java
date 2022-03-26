@@ -5,6 +5,7 @@ import org.hamcrest.collection.IsIterableContainingInOrder;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -252,7 +253,11 @@ public class StreamsExerciseTest {
     @Test
     public void shouldCollectToString() {
         String sample = "Working with Java8 Streams";
-        String result = sample.chars().mapToObj(a -> ((char) a)).collect(new CharacterToStringCollector());
+        String result = sample.chars()
+                              .boxed()
+                              .map(Character::toString)
+                              .collect(Collectors.joining());
         assertThat(sample, equalTo(result));
     }
+
 }
