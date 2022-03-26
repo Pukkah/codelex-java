@@ -253,10 +253,7 @@ public class StreamsExerciseTest {
     @Test
     public void shouldCollectToString() {
         String sample = "Working with Java8 Streams";
-        String result = sample.chars()
-                              .boxed()
-                              .map(Character::toString)
-                              .collect(Collectors.joining());
+        String result = sample.chars().mapToObj(a -> ((char) a)).collect(new CharacterToStringCollector());
         assertThat(sample, equalTo(result));
     }
 
