@@ -65,15 +65,7 @@ public class CarService {
 
     public List<Car> getCarsByManufacturerYearOfEstablishment(Operator operator, int year) {
         return cars.stream()
-                   .filter(car ->
-                           car.getManufacturerList()
-                              .stream()
-                              .filter(manufacturer ->
-                                      operator.compare(year, manufacturer.getYearOfEstablishment())
-                              )
-                              .toList()
-                              .size() > 0
-                   )
+                   .filter(car -> car.hasManufacturerYearOfEstablishment(operator, year))
                    .toList();
     }
 

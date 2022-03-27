@@ -64,6 +64,12 @@ public class Car {
         this.engineType = engineType;
     }
 
+    public boolean hasManufacturerYearOfEstablishment(Operator operator, int year) {
+        return manufacturerList.stream()
+                               .anyMatch(m ->
+                                       operator.compare(year, m.getYearOfEstablishment()));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -73,7 +79,12 @@ public class Car {
             return false;
         }
         Car car = (Car) o;
-        return Double.compare(car.price, price) == 0 && yearOfManufacture == car.yearOfManufacture && Objects.equals(name, car.name) && Objects.equals(model, car.model) && Objects.equals(manufacturerList, car.manufacturerList) && engineType == car.engineType;
+        return Double.compare(car.price, price) == 0
+                && yearOfManufacture == car.yearOfManufacture
+                && Objects.equals(name, car.name)
+                && Objects.equals(model, car.model)
+                && Objects.equals(manufacturerList, car.manufacturerList)
+                && engineType == car.engineType;
     }
 
     @Override
