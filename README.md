@@ -133,7 +133,14 @@ TODO
 - I/O (Input/Output) Operations - java.io, java.nio
 - TDD - JUnit 5
 
-## [Day15](./src/main/java/io/codelex/notes/day16) (25.03.2022)
+## [Day16](./src/main/java/io/codelex/notes/day16) (25.03.2022)
 
 - Functional Programming
 - Stream API
+
+## [Day17](./src/main/java/io/codelex/notes/day17) (28.03.2022)
+
+- Custom Stream Collector,
+  see: [CharacterToStringCollector](./src/main/java/io/codelex/streams/practice/CharacterToStringCollector.java)
+- Optionals
+- Concurrency - Thread, ExecutorService & keywords - synchronized, volatile
