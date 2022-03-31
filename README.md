@@ -142,5 +142,9 @@ TODO
 
 - Custom Stream Collector,
   see: [CharacterToStringCollector](./src/main/java/io/codelex/streams/practice/CharacterToStringCollector.java)
-- Optionals
+- [Optionals](./src/main/java/io/codelex/notes/day17/Optionals.java)
 - Concurrency - Thread, ExecutorService & keywords - synchronized, volatile
+
+## [Day18](./src/main/java/io/codelex/notes/day18) (30.03.2022)
+
+- [Summary exercises](./src/main/java/io/codelex/oop/summary) - OOP & Generics
