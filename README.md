@@ -148,3 +148,7 @@ TODO
 ## [Day18](./src/main/java/io/codelex/notes/day18) (30.03.2022)
 
 - [Summary exercises](./src/main/java/io/codelex/oop/summary) - OOP & Generics
+
+## [Day19](./src/main/java/io/codelex/notes/day19) (01.04.2022)
+
+- See [TEST.md](./src/main/java/io/codelex/notes/day19/TEST.md)
