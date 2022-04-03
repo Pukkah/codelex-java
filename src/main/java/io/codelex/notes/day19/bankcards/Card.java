@@ -12,7 +12,7 @@ abstract class Card {
     public Card(int number, String owner, String ccv, BigDecimal balance) {
         this.number = number;
         this.owner = owner;
-        if (!ccv.matches("^\\d\\d\\d$")) {
+        if (!ccv.matches("^\\d{3}$")) {
             throw new InputMismatchException("Check CCV!");
         }
         this.ccv = ccv;
