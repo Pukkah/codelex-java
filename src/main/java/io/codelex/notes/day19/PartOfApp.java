@@ -15,7 +15,7 @@ public class PartOfApp {
         System.out.println(evenPercent); //Should print out 0.5 because 50% of numbers are even
     }
 
-    private static <E> double partOf(List<E> list, Predicate<? super E> predicate) {
+    private static <E> double partOf(List<E> list, Predicate<E> predicate) {
         return (double) list.stream().filter(predicate).count() / list.size();
 
     }
