@@ -1,6 +1,5 @@
 package io.codelex.assignments.restcountries;
 
-import java.util.Currency;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -48,11 +47,8 @@ public class Country {
         return currencies;
     }
 
-    public void addCurrency(String code) {
-        if (code.length() == 3) {
-            Currency currency = Currency.getInstance(code);
+    public void addCurrency(Currency currency) {
             currencies.add(currency);
-        }
     }
 
     public double getDensity() {
@@ -60,6 +56,17 @@ public class Country {
             return (getPopulation() / getArea());
         }
         return 0.0;
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "name='" + name + '\'' +
+                ", capital='" + capital + '\'' +
+                ", population=" + population +
+                ", area=" + area +
+                ", currencies=" + currencies +
+                '}';
     }
 
 }

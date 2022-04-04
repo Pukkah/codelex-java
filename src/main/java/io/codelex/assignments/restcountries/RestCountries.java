@@ -20,35 +20,33 @@ public class RestCountries {
         List<Country> countries = parseRestCountriesJsonData(jsonData);
 
         System.out.println("Top 10 by population:");
-        List<String> top10pop = countries.stream()
-                                         .sorted(Comparator.comparingInt(Country::getPopulation).reversed())
+        List<Country> top10pop = countries.stream()
+                                         .sorted(Comparator.comparing(Country::getPopulation).reversed())
                                          .limit(10L)
-                                         .map(country -> country.getName() + '\t' + country.getPopulation())
                                          .toList();
-
         top10pop.forEach(System.out::println);
 
         System.out.println();
         System.out.println("Top 10 by area:");
-        List<String> top10area = countries.stream()
+        List<Country> top10area = countries.stream()
                                           .filter(country -> country.getArea() != 0)
-                                          .sorted(Comparator.comparingDouble(Country::getArea).reversed())
+                                          .sorted(Comparator.comparing(Country::getArea).reversed())
                                           .limit(10L)
-                                          .map(country -> country.getName() + '\t' + country.getArea())
                                           .toList();
         top10area.forEach(System.out::println);
 
         System.out.println();
         System.out.println("Top 10 by density");
-        List<String> top10density = countries.stream()
+        List<Country> top10density = countries.stream()
                                              .filter(country -> country.getDensity() != 0.0)
                                              .sorted(Comparator.comparing(Country::getDensity).reversed())
                                              .limit(10L)
-                                             .map(country -> String.format("%s\t%.2f", country.getName(), country.getDensity()))
                                              .toList();
-
         top10density.forEach(System.out::println);
 
+        System.out.println();
+        System.out.println("Listing all Countries");
+        countries.forEach(System.out::println);
     }
 
     private static String getLocalRestCountriesJsonData() throws IOException {
@@ -92,7 +90,11 @@ public class RestCountries {
             }
             for (Object currencyObj : countryJson.getJSONArray("currencies")) {
                 JSONObject currencyJson = (JSONObject) currencyObj;
-                country.addCurrency(currencyJson.getString("code"));
+                String code = currencyJson.getString("code");
+                String name = currencyJson.getString("name");
+                String symbol = currencyJson.getString("symbol");
+                Currency currency = new Currency(code, name, symbol);
+                country.addCurrency(currency);
             }
             countries.add(country);
         }
