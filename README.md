@@ -156,3 +156,12 @@ TODO
 ## Day20 (04.04.2022)
 
 - HTTP, un ne tikai...
+
+## Day21 (06.04.2022)
+
+- HTTP Request
+- Postman - <https://www.postman.com>
+- Spring Boot - [Spring Initializr](https://start.spring.io/)
+- @RestController & @GetMapping
+
+> Code Examples in different project, as this one is POJO...
