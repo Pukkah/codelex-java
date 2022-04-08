@@ -165,3 +165,10 @@ TODO
 - @RestController & @GetMapping
 
 > Code Examples in different project, as this one is POJO...
+
+## Day22 (08.04.2022)
+
+- Application Layers
+  - API Layer - @Controller
+  - Service Layer - @Service
+  - Data Access Layer - @Repository
