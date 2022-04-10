@@ -23,8 +23,11 @@ public class ArrayListExercise9 {
         secondList.add("Pink");
         System.out.println("List of second array: " + secondList);
 
-        //TODO: Write a Java program to join two array lists.
-        //...
+        // Write a Java program to join two array lists.
+        List<String> joinedList = new ArrayList<>();
+        joinedList.addAll(firstList);
+        joinedList.addAll(secondList);
+
     }
 
 }
