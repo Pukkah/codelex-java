@@ -1,21 +1,21 @@
 package io.codelex.polymorphism.practice.exercise1;
 
-public class Audi {
-    private Integer currentSpeed = 0;
+public class Audi implements Car {
+    private int currentSpeed = 0;
 
+    @Override
     public void speedUp() {
         currentSpeed += 10;
     }
 
+    @Override
     public void slowDown() {
         currentSpeed += 10;
     }
 
-    public String showCurrentSpeed() {
-        return currentSpeed.toString();
+    @Override
+    public int showCurrentSpeed() {
+        return currentSpeed;
     }
 
-    public void startEngine() {
-        System.out.println("Rrrrrrr.....");
-    }
 }
