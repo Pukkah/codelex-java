@@ -152,23 +152,3 @@ TODO
 ## [Day19](./src/main/java/io/codelex/notes/day19) (01.04.2022)
 
 - See [TEST.md](./src/main/java/io/codelex/notes/day19/TEST.md)
-
-## Day20 (04.04.2022)
-
-- HTTP, un ne tikai...
-
-## Day21 (06.04.2022)
-
-- HTTP Request
-- Postman - <https://www.postman.com>
-- Spring Boot - [Spring Initializr](https://start.spring.io/)
-- @RestController & @GetMapping
-
-> Code Examples in different project, as this one is POJO...
-
-## Day22 (08.04.2022)
-
-- Application Layers
-  - API Layer - @Controller
-  - Service Layer - @Service
-  - Data Access Layer - @Repository
