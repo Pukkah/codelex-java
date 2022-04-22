@@ -7,22 +7,22 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class AnimalsMain {
-    private static final Map<String, Constructor> animalConstructors = Map.of(
+    private static final Map<String, Constructor> ANIMAL_CONSTRUCTORS = Map.of(
             "Mouse", Mouse.class.getConstructors()[0],
             "Zebra", Zebra.class.getConstructors()[0],
             "Cat", Cat.class.getConstructors()[0],
             "Tiger", Tiger.class.getConstructors()[0]
     );
-    private static final Map<String, Constructor> foodConstructors = Map.of(
+    private static final Map<String, Constructor> FOOD_CONSTRUCTORS = Map.of(
             "Vegetable", Vegetable.class.getConstructors()[0],
             "Meat", Meat.class.getConstructors()[0]
     );
 
     public static void main(String[] args) {
         System.out.println("# Animal: {AnimalType} {AnimalName} {AnimalWeight} {AnimalLivingRegion} [{CatBreed} = Only if its cat]");
-        System.out.println("# AnimalType: " + String.join(", ", animalConstructors.keySet()));
+        System.out.println("# AnimalType: " + String.join(", ", ANIMAL_CONSTRUCTORS.keySet()));
         System.out.println("# Food: {FoodType} {quantity}");
-        System.out.println("# FoodType: " + String.join(", ", foodConstructors.keySet()));
+        System.out.println("# FoodType: " + String.join(", ", FOOD_CONSTRUCTORS.keySet()));
         System.out.println("# Enter 'End' at 'Animal' stage to quit!");
         List<Animal> animals = new ArrayList<>();
         Scanner in = new Scanner(System.in);
@@ -33,7 +33,7 @@ public class AnimalsMain {
                 break;
             }
             String animalClass = animalInput[0];
-            if (!animalConstructors.containsKey(animalClass)) {
+            if (!ANIMAL_CONSTRUCTORS.containsKey(animalClass)) {
                 continue;
             }
             Animal animal;
@@ -46,8 +46,8 @@ public class AnimalsMain {
                 } else {
                     continue;
                 }
-                animal = (Animal) animalConstructors.get(animalClass)
-                                                    .newInstance(initargs);
+                animal = (Animal) ANIMAL_CONSTRUCTORS.get(animalClass)
+                                                     .newInstance(initargs);
                 animal.makeSound();
             } catch (Exception ignored) {
                 continue;
@@ -57,13 +57,13 @@ public class AnimalsMain {
                 System.out.print("Food: ");
                 String[] foodInput = in.nextLine().split(" ");
                 String foodClass = foodInput[0];
-                if (!foodConstructors.containsKey(foodClass) || foodInput.length != 2) {
+                if (!FOOD_CONSTRUCTORS.containsKey(foodClass) || foodInput.length != 2) {
                     continue;
                 }
                 try {
                     Integer foodQuantity = Integer.valueOf(foodInput[1]);
-                    Food food = (Food) foodConstructors.get(foodClass)
-                                                       .newInstance(foodQuantity);
+                    Food food = (Food) FOOD_CONSTRUCTORS.get(foodClass)
+                                                        .newInstance(foodQuantity);
                     animal.eatFood(food);
                     System.out.println(animal);
                     animals.add(animal);
