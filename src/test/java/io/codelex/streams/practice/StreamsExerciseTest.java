@@ -255,4 +255,5 @@ public class StreamsExerciseTest {
         String result = sample.chars().mapToObj(a -> ((char) a)).collect(new CharacterToStringCollector());
         assertThat(sample, equalTo(result));
     }
+
 }
